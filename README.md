@@ -230,6 +230,8 @@ Como comentabamos en la pregunta anterior los verbos HTTP, también conocidos co
   - Se utiliza para eliminar de manera permanente un recurso del servidor.
   - No requiere datos adicionales en el cuerpo de la solicitud.
   - Ejemplo de uso: Eliminar un usuario específico del sistema a través de la URL /usuarios/{id}.
+
+![Descripción Gráfica Verbos API](./API verb.png)  
  
 #### Otros métodos HTTP menos comunes incluyen:
 
