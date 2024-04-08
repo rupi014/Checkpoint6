@@ -10,4 +10,6 @@ usuario1 = Usuario("Rubens", "12345678")
 print(usuario1.name)
 print(usuario1.password)
 
-# En este ejemplo, la clase Usuario tiene un método __init__ que inicializa los atributos name y password cuando se crea un objeto. Luego, se crea un objeto usuario1 con el nombre de usuario "Rubens" y la contraseña "12345678". Finalmente, se imprimen los atributos del objeto usuario1.
+# En este ejemplo, la clase Usuario tiene un método __init__ que inicializa los atributos name y password cuando se crea un objeto. 
+# Luego, se crea un objeto usuario1 con el nombre de usuario "Rubens" y la contraseña "12345678". 
+# Finalmente, se imprimen los atributos del objeto usuario1.
