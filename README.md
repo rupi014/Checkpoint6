@@ -74,6 +74,8 @@ En esta sintaxis:
 4. Se accede a los atributos del ```objeto mi_coche``` (marca, modelo, y color) usando la notación de punto y se imprime la marca del coche.
 5. Se llama al método ```imprimir_info``` del objeto ```mi_coche```, que imprime la información completa del coche (marca, modelo y color) utilizando el método definido en la clase.
 
+En resumen, las clases en Python son fundamentales para organizar y estructurar el código, facilitar la reutilización y abstracción, y modelar objetos del mundo real en nuestros programas.
+
 ---
 
 </br>
@@ -240,7 +242,9 @@ Como comentabamos en la pregunta anterior los verbos HTTP, también conocidos co
 - PATCH: Se utiliza para aplicar modificaciones parciales a un recurso existente.
 - TRACE: Se utiliza para realizar una prueba de bucle de retroalimentación remota a lo largo de la ruta hacia el recurso objetivo.
 
-Es importante comprender las características y el uso adecuado de cada verbo en el contexto de una API para garantizar una comunicación eficiente y segura entre clientes y servidores. Al elegir el verbo correcto para cada operación, se pueden diseñar APIs coherentes y fáciles de entender, lo que facilita el desarrollo de aplicaciones robustas y escalables. Además, seguir las convenciones y estándares establecidos para el uso de los verbos API ayuda a mejorar la interoperabilidad y la compatibilidad entre diferentes sistemas y aplicaciones.  
+> [!IMPORTANT]
+> Es importante comprender las características y el uso adecuado de cada verbo en el contexto de una API para garantizar una comunicación eficiente y segura entre clientes y servidores. Al elegir el verbo correcto para cada operación, se pueden diseñar APIs coherentes y fáciles de entender, lo que facilita el desarrollo de aplicaciones robustas y escalables. Además, seguir las convenciones y estándares establecidos para el uso de los verbos API ayuda a mejorar la interoperabilidad y la compatibilidad entre diferentes sistemas y aplicaciones.
+  
 
 ---
 
@@ -267,7 +271,7 @@ MongoDB es una base de datos NoSQL. Para entender esta afirmación, es important
 
 Supongamos que estamos creando una aplicación de comercio electrónico que necesita almacenar información sobre productos y categorías.
 
-1. Base de Datos SQL:
+1. **Base de Datos SQL**:
 En una base de datos SQL, podríamos tener dos tablas separadas para almacenar la información de los productos y las categorías.
 
 Tabla ```Productos```:
@@ -285,10 +289,11 @@ Tabla ```Categorias```:
 | 1  | Electrónica |
 | 2  | Computadoras|
 ```
+>[!NOTE]
+> Aquí, la tabla ```Productos``` tiene una columna ```CategoriaID``` que hace referencia al ```ID``` de la categoría correspondiente en la tabla ```Categorias```  
 
-Aquí, la tabla ```Productos``` tiene una columna ```CategoriaID``` que hace referencia al ```ID``` de la categoría correspondiente en la tabla ```Categorias```  
 
-2. Base de Datos NoSQL (MongoDB):
+2. **Base de Datos NoSQL (MongoDB)**:
 En MongoDB, podríamos almacenar esta información en una sola colección utilizando documentos JSON (BSON).
 
 Colección ```Productos```:
@@ -309,7 +314,9 @@ Colección ```Productos```:
 ]
 
 ```
-En este caso, cada documento representa un producto y contiene información sobre el nombre, precio y categoría. No es necesario referenciar otra colección para obtener información sobre la categoría; todo está contenido dentro del documento de producto.
+>[!NOTE]
+> En este caso, cada documento representa un producto y contiene información sobre el nombre, precio y categoría. No es necesario referenciar otra colección para obtener información sobre la categoría; todo está contenido dentro del documento de producto.
+
 
 #### MongoDB:
 
@@ -327,3 +334,201 @@ En resumen, MongoDB es una base de datos NoSQL que utiliza un modelo de document
 <h3 align="center">¿Qué es Postman?</h3>  
 </br>
 
+**Postman** es una herramienta popular utilizada por desarrolladores de software para probar, documentar y colaborar en APIs. Es una aplicación que ofrece una interfaz gráfica de usuario (GUI) amigable que permite a los desarrolladores enviar solicitudes HTTP a servidores web y ver las respuestas correspondientes. Postman es extremadamente versátil y es utilizado por una amplia gama de profesionales en el desarrollo de software, desde desarrolladores front-end y back-end hasta ingenieros de pruebas y administradores de API.
+
+#### Características principales de Postman:
+
+1. **Interfaz Gráfica de Usuario (GUI)**: Postman proporciona una interfaz gráfica fácil de usar que permite a los usuarios crear, enviar y guardar solicitudes HTTP de manera intuitiva.
+
+![GUI Postman](./post_example.png) 
+
+2. **Envío de Solicitudes HTTP**: Permite enviar diferentes tipos de solicitudes HTTP, como GET, POST, PUT, DELETE, entre otros, a endpoints específicos de una API.
+
+![Descripción Gráfica Verbos API](./postman_verb.png) 
+
+3. **Pruebas Automatizadas**: Permite a los usuarios crear y ejecutar scripts de prueba automatizados para probar la funcionalidad de una API. Esto es útil para realizar pruebas de regresión y asegurarse de que una API funcione correctamente después de realizar cambios.
+
+4. **Colecciones y Entornos**: Postman permite a los usuarios organizar solicitudes relacionadas en colecciones y configurar entornos para manejar variables de entorno. Esto facilita la gestión y el mantenimiento de las pruebas y la documentación de la API.
+
+5. **Documentación de API**: Postman ofrece herramientas para generar automáticamente documentación de API a partir de colecciones de solicitudes, lo que facilita compartir y colaborar en el desarrollo de API.
+
+6. **Colaboración**: Postman permite a los equipos colaborar en el desarrollo y la prueba de APIs mediante el uso de funciones de sincronización en la nube y la compartición de colecciones de solicitudes.
+
+#### Usos de Postman:
+
+- **Desarrollo y Pruebas de API**: Los desarrolladores utilizan Postman para probar y depurar APIs durante el desarrollo de aplicaciones web y móviles.
+
+- **Documentación de API**: Postman se utiliza para generar documentación detallada de APIs, lo que facilita la comprensión y el uso de la API por parte de otros desarrolladores.
+
+- **Automatización de Pruebas**: Los equipos de pruebas utilizan Postman para crear y ejecutar pruebas automatizadas de API, lo que ayuda a garantizar la calidad y estabilidad de las aplicaciones.
+
+- **Colaboración en Equipo**: Los equipos de desarrollo colaboran en el desarrollo y la prueba de APIs utilizando las funciones de colaboración de Postman, lo que facilita la comunicación y el intercambio de información entre los miembros del equipo.
+
+En resumen, Postman es una herramienta imprescindible en el arsenal de cualquier desarrollador de software que trabaje con APIs, ya que simplifica el proceso de desarrollo, prueba y documentación de APIs y facilita la colaboración en equipo.  
+
+---
+
+</br>
+<h3 align="center">¿Qué es el polimorfismo?</h3>  
+</br>
+
+#### Definición  
+
+El polimorfismo es un concepto que permite que objetos de diferentes clases puedan ser tratados de manera uniforme a través de una interfaz común. En otras palabras, el polimorfismo permite que un objeto pueda comportarse de diferentes formas dependiendo del contexto en el que se utilice.
+
+#### Principios del Polimorfismo:
+
+1. **Métodos Polimórficos**: En el contexto del polimorfismo, los métodos de las clases pueden tener el mismo nombre pero comportarse de manera diferente en cada clase. Esto permite que diferentes clases implementen un método común de manera específica para sus propios objetos.
+
+2. **Subtipos y Superclases**: El polimorfismo se basa en la relación de herencia entre clases. Un objeto de una subclase puede ser tratado como un objeto de su superclase. Esto significa que un método definido en la superclase puede ser invocado en un objeto de la subclase.
+
+>[!IMPORTANT]
+>La herencia en Python es un concepto que permite que una clase (llamada subclase o clase hija) herede atributos y métodos de otra clase (llamada superclase o clase padre). Esto significa que la subclase puede reutilizar el código de la superclase y extender su funcionalidad añadiendo nuevos métodos o modificando los existentes. 
+
+#### Ejemplo de Polimorfismo en Python:
+
+```
+class Animal:
+    def hablar(self):
+        pass
+
+class Perro(Animal):
+    def hablar(self):
+        return "¡Guau!"
+
+class Gato(Animal):
+    def hablar(self):
+        return "¡Miau!"
+
+def hacer_sonido(animal):
+    return animal.hablar()
+
+perro = Perro()
+gato = Gato()
+
+print(hacer_sonido(perro))  # Salida: ¡Guau!
+print(hacer_sonido(gato))   # Salida: ¡Miau!
+
+```
+#### Explicación del Ejemplo:
+
+- Se define una clase base ```Animal``` con un método ```hablar()``` que no está implementado. Esto define una interfaz común para todas las clases que hereden de Animal.
+
+- Se definen dos clases ```Perro``` y ```Gato``` que heredan de la clase ```Animal```. Cada una de estas clases implementa su propio método ```hablar()``` que devuelve el sonido característico del perro y del gato respectivamente.
+
+- Se define una función ```hacer_sonido(animal)``` que toma un objeto de tipo ```Animal``` como argumento y llama al método ```hablar()``` de ese objeto.
+
+- Se crean objetos ```perro``` y ```gato``` de las clases ```Perro``` y ```Gato``` respectivamente.
+
+- Se llama a la función ```hacer_sonido()``` con cada uno de estos objetos como argumento. A pesar de que ambos objetos son tratados como objetos de tipo ```Animal```, el método ```hablar()``` que se ejecuta es el correspondiente a la clase real de cada objeto, mostrando así el polimorfismo en acción.
+
+#### Conclusión:
+
+El polimorfismo es un concepto fundamental en la programación orientada a objetos que permite escribir código más flexible y reutilizable al permitir que objetos de diferentes clases sean tratados de manera uniforme a través de una interfaz común. Esto mejora la modularidad y la legibilidad del código y facilita la implementación de patrones de diseño como el patrón de estrategia y el patrón de fábrica.  
+
+---
+
+</br>
+<h3 align="center">¿Qué es un método dunder?</h3>  
+</br>
+
+En la programación Python, los métodos dunder (también conocidos como "métodos especiales") son aquellos métodos que tienen nombres que comienzan y terminan con doble guion bajo (__). Estos métodos dunder son predefinidos en Python y tienen un propósito específico para realizar acciones especiales en las clases.
+
+#### Características clave de los métodos dunder:
+
+1. Sintaxis Especial: Los métodos dunder tienen una sintaxis especial que los diferencia de los métodos normales de una clase.
+
+2. Definidos por Python: Estos métodos son definidos por el propio lenguaje Python y proporcionan funcionalidades predefinidas que pueden ser utilizadas en las clases.
+
+3. Acciones Especiales: Cada método dunder realiza una acción específica en respuesta a ciertos eventos o operaciones que ocurren en las instancias de la clase.
+
+#### Algunos ejemplos comunes de métodos dunder y sus usos:
+1. ```__init__```: Este método dunder se utiliza para inicializar objetos de la clase cuando son creados. Es el constructor de la clase.
+```
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+persona1 = Persona("Juan", 30)
+
+```
+2. ```__str__```: Este método dunder se utiliza para devolver una representación de cadena legible de un objeto. Es llamado cuando se utiliza la función str() o cuando se imprime el objeto.
+```
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def __str__(self):
+        return f"Persona: {self.nombre}, Edad: {self.edad}"
+
+persona1 = Persona("Juan", 30)
+print(persona1)  # Salida: Persona: Juan, Edad: 30
+
+```
+3. ```__len__```: Este método dunder se utiliza para devolver la longitud de un objeto. Es llamado cuando se utiliza la función len() en el objeto.
+```
+class ListaPersonalizada:
+    def __init__(self, elementos):
+        self.elementos = elementos
+
+    def __len__(self):
+        return len(self.elementos)
+
+lista = ListaPersonalizada([1, 2, 3, 4, 5])
+print(len(lista))  # Salida: 5
+
+```
+Estos son solo algunos ejemplos de métodos dunder comunes, pero Python proporciona una variedad de métodos dunder para realizar diferentes acciones especiales, como comparación de objetos, operaciones aritméticas personalizadas, iteración sobre objetos, y más.
+
+#### Conclusión
+
+En resumen, los métodos dunder en Python son métodos especiales predefinidos que proporcionan funcionalidades específicas en las clases. Su uso permite personalizar el comportamiento de las clases y aprovechar las características únicas del lenguaje Python.
+
+---
+
+</br>
+<h3 align="center">¿Qué es un decorador de Python?</h3>  
+</br>  
+
+Un decorador en Python es una función avanzada que permite que se modifique o se amplíe el comportamiento de otras funciones o métodos. Los decoradores son una característica importante y poderosa en Python porque permite que el código sea más conciso y más fácil de mantener.
+
+>[!IMPORTANT]
+>Para entender los decoradores, primero tenemos que entender que en Python, las funciones son de primera clase. Esto significa que las funciones se pueden pasar como argumentos a otras funciones, se pueden devolver como valores desde otras funciones y se pueden asignar a variables.
+
+Un decorador es una función que toma una función como argumento y devuelve una nueva función que generalmente extiende o modifica el comportamiento de la función argumento.  
+Además, Python tiene una sintaxis especial para aplicar decoradores, utilizando el símbolo @, que puedes aplicar encima de la definición de la función.
+
+#### Ejemplo:
+```
+def my_decorator(func):
+    def wrapper():
+        print("Antes de la función original.")
+        func()
+        print("Después de la función original.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("¡Hola, mundo!")
+
+say_hello()
+```
+1. Primero, definimos una función llamada ```my_decorator``` utilizando la función def. Esta función toma otra función ```(func)``` como argumento y devuelve otra función llamada ```wrapper```.
+2. Dentro de ```my_decorator```, definimos una función interna llamada ```wrapper```. Esta función actúa como un envoltorio alrededor de la función original que queremos decorar ```(say_hello)```.
+3. En ```wrapper```, imprimimos un mensaje "Antes de la función original." para indicar que estamos a punto de ejecutar la función original. Luego, llamamos a la función original ```(func())```, que en este caso es ```say_hello()```. Después de llamar a la función original, imprimimos otro mensaje "Después de la función original.".
+4. Usamos el decorador ```my_decorator``` para decorar la función ```say_hello``` usando la sintaxis ```@my_decorator``` justo encima de la definición de la función.
+5. Finalmente, llamamos a la función decorada ```say_hello()```.
+
+#### Salida
+```
+Antes de la función original.
+¡Hola, mundo!
+Después de la función original.
+```
+
+>[!NOTE]
+>Al llamar a ```say_hello()```, en realidad estamos llamando a ```wrapper()```, que a su vez llama a la función original ```say_hello()```. El resultado es que el mensaje "Antes de la función original." se imprime antes de ejecutar ```say_hello()```, luego se imprime "¡Hola, mundo!", que es el mensaje de la función original, y finalmente se imprime "Después de la función original.".  
+
+Este es solo un ejemplo básico para comprender el funcionamiento de los decoradores. En la práctica, los decoradores pueden utilizarse para una amplia gama de tareas, como el registro, la validación de entrada, el manejo de excepciones, la autenticación, la gestión de tiempo, entre otros. Los decoradores proporcionan una forma poderosa y flexible de extender o modificar el comportamiento de las funciones en Python.
