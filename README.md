@@ -77,7 +77,6 @@ En esta sintaxis:
 ---
 
 </br>
-
 <h3 align="center">¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?</h3>  
 </br>
 Una instancia de una clase es un objeto específico creado a partir de esa clase. En otras palabras, una instancia es una copia individual de una clase que tiene sus propios valores para los atributos definidos en la clase y puede ejecutar sus propios métodos.  
@@ -117,21 +116,214 @@ def __init__(self, marca, modelo, color):
 
 3. ```self.modelo = modelo```: Similarmente, esta línea asigna el valor del parámetro modelo al atributo modelo de la instancia actual. Cada instancia tendrá su propio valor para el modelo del coche.
 
-4. ```self.color = color```: Aquí, se asigna el valor del parámetro color al atributo color de la instancia actual. De esta manera, cada instancia puede tener su propio color asignado.  
+4. **self.color = color```: Aquí, se asigna el valor del parámetro color al atributo color de la instancia actual. De esta manera, cada instancia puede tener su propio color asignado.  
 
 Por lo tanto, cuando creamos una nueva instancia de la clase ```Coche``` como ```mi_coche```, se llama automáticamente al método ```__init__```, pasando los valores especificados como argumentos al crear la instancia. Esto asegura que la instancia se inicialice correctamente con los valores proporcionados.   
 
 ---
 
 </br>
-
 <h3 align="center">¿Qué es una API?</h3>  
 </br>
 
-Definición:
+#### Definición:
 
 Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que diferentes sistemas informáticos se comuniquen entre sí. En otras palabras, proporciona un conjunto de herramientas y definiciones que permiten que una aplicación use ciertas funciones o acceda a ciertos datos de otra aplicación, servicio o sistema operativo de manera segura y controlada.  
 
-Ejemplo:
+#### Ejemplo:
 
 Para entender de manera algo más simple que es una API, esta es como un camarero en un restaurante. El camarero toma tu pedido (solicitud), comunica esa solicitud al cocinero (servidor) y luego trae tu comida (respuesta) de vuelta a ti. En este caso, el camarero actúa como una interfaz entre tú y el chef, simplificando el proceso de pedir comida.  
+
+![Descripción Gráfica API](./API.jpg)  
+
+#### Componentes de una API:
+
+1. **Solicitud (Request)**:
+
+- Una solicitud es una acción realizada por un cliente para acceder a ciertos datos o realizar una operación específica a través de la API.
+- Puede incluir diferentes elementos, como:
+  - Método HTTP: Indica la acción que se desea realizar en el recurso. Los métodos comunes incluyen GET, POST, PUT y DELETE.
+  - URL (Uniform Resource Locator): Es la dirección específica del recurso al que se desea acceder.
+  - Cuerpo de la solicitud: Contiene los datos que se envían al servidor, como parámetros o información en formato JSON o XML.
+    
+2. **Respuesta (Response)**:
+
+- Una respuesta es la información devuelta por el servidor de la API en respuesta a una solicitud.
+- Puede incluir diferentes elementos, como:
+  - Datos solicitados: Si la solicitud es exitosa, la respuesta generalmente incluirá los datos solicitados por el cliente.
+  - Mensaje de estado HTTP: Indica si la solicitud se ha procesado correctamente o si se ha producido algún error. Algunos códigos de estado comunes son 200 (OK), 404 (No encontrado) y 500 (Error interno del servidor).
+  - Cuerpo de la respuesta: Contiene los datos devueltos por el servidor, generalmente en formato JSON o XML.
+
+3. **Métodos HTTP**:
+
+- Los métodos HTTP son verbos que indican la acción que se desea realizar en un recurso específico.
+- Algunos de los métodos HTTP más comunes son:
+  - ```GET```: Se utiliza para recuperar datos de un recurso sin realizar cambios en el servidor.
+  - ```POST```: Se utiliza para enviar datos al servidor para su procesamiento, como crear un nuevo recurso.
+  - ```PUT```: Se utiliza para actualizar los datos de un recurso existente en el servidor.
+  - ```DELETE```: Se utiliza para eliminar un recurso del servidor.
+ 
+  En la siguiente pregunta prufundizaremos aún más en este métodos.  
+ 
+4. **Endpoints**:
+
+- Los endpoints son URLs específicas que representan recursos disponibles a través de la API.
+- Cada endpoint puede permitir una o más operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en el recurso asociado.
+- Por ejemplo, ```/usuarios``` podría ser un endpoint que permite acceder a información de usuarios, mientras que ```/productos``` podría ser un endpoint para acceder a información de productos.
+
+#### Importancia de los Componentes de una API:
+
+- La solicitud y la respuesta son los componentes esenciales que facilitan la comunicación entre el cliente y el servidor a través de la API.
+- Los métodos HTTP proporcionan una forma estandarizada de indicar la acción deseada en un recurso específico.
+- Los endpoints permiten acceder a recursos específicos a través de la API de una manera estructurada y controlada.
+
+#### Importancia de las APIs:
+
+1. Facilitan la Integración: Las APIs permiten la interoperabilidad entre diferentes sistemas y aplicaciones, lo que facilita la integración de sistemas complejos y la creación de soluciones más completas.
+2. Promueven la Reutilización de Código: Al exponer funcionalidades a través de una API, los desarrolladores pueden reutilizar fácilmente el código en diferentes proyectos, lo que ahorra tiempo y recursos y fomenta las buenas prácticas de desarrollo.
+3. Fomentan la Innovación: Las APIs abiertas y bien documentadas permiten a los desarrolladores acceder a una variedad de servicios y datos, fomentando la innovación al permitir la creación de nuevas aplicaciones y servicios basados en funcionalidades existentes.
+
+#### Conclusión:
+
+En resumen, una API es una herramienta esencial en el desarrollo de software que facilita la comunicación entre diferentes sistemas, aplicaciones o servicios. Proporciona un medio estandarizado y controlado para compartir datos y funcionalidades, lo que facilita la integración, la reutilización de código y fomenta la innovación en el desarrollo de software.  
+
+---
+
+</br>
+<h3 align="center">¿Cuáles son los tres verbos de API?</h3>  
+</br>
+
+Como comentabamos en la pregunta anterior los verbos HTTP, también conocidos como métodos HTTP, son utilizados en las API para indicar la acción que se desea realizar en un recurso específico. Cada verbo tiene un propósito y una función específica en la comunicación entre clientes y servidores. Estos son los 4 verbos más comunmente utiliados.
+
+1. GET:
+
+- El método GET se utiliza para recuperar datos de un recurso específico sin realizar cambios en el servidor.
+- Características principales:
+  - Es seguro e idempotente, lo que significa que no debe causar cambios en el estado del servidor y puede ser llamado múltiples veces sin efectos secundarios.
+  - Se utiliza para solicitar información de un recurso específico.
+  - Los datos solicitados se incluyen en la URL como parámetros de consulta (query parameters).
+  - Ejemplo de uso: Obtener información de un usuario específico a través de la URL /usuarios/{id}.
+    
+2. POST:
+
+- El método POST se utiliza para enviar datos al servidor para su procesamiento.
+- Características principales:
+  - No es idempotente, lo que significa que enviar la misma solicitud varias veces puede tener diferentes efectos en el servidor.
+  - Se utiliza para crear nuevos recursos en el servidor o realizar operaciones que cambien el estado del servidor.
+  - Los datos enviados al servidor se incluyen en el cuerpo (body) de la solicitud.
+  - Ejemplo de uso: Crear un nuevo usuario enviando los datos del usuario al endpoint /usuarios.
+   
+3. PUT:
+
+- El método PUT se utiliza para actualizar los datos de un recurso existente en el servidor.
+- Características principales:
+  - Es idempotente, lo que significa que enviar la misma solicitud varias veces produce el mismo resultado.
+  - Se utiliza para modificar o reemplazar completamente los datos de un recurso específico.
+  - Los datos actualizados se incluyen en el cuerpo de la solicitud.
+  - Ejemplo de uso: Actualizar los datos de un usuario existente enviando los nuevos datos al endpoint /usuarios/{id}.
+
+4. DELETE:
+
+- El método DELETE se utiliza para eliminar un recurso específico del servidor.
+- Características principales:
+  - Es idempotente, lo que significa que enviar la misma solicitud varias veces produce el mismo resultado.
+  - Se utiliza para eliminar de manera permanente un recurso del servidor.
+  - No requiere datos adicionales en el cuerpo de la solicitud.
+  - Ejemplo de uso: Eliminar un usuario específico del sistema a través de la URL /usuarios/{id}.
+
+![Descripción Gráfica Verbos API](./API_verb.png)  
+ 
+#### Otros métodos HTTP menos comunes incluyen:
+
+- HEAD: Se utiliza para solicitar encabezados de respuesta del servidor sin recuperar el cuerpo de la respuesta.
+- OPTIONS: Se utiliza para solicitar los métodos HTTP permitidos en un recurso específico.
+- PATCH: Se utiliza para aplicar modificaciones parciales a un recurso existente.
+- TRACE: Se utiliza para realizar una prueba de bucle de retroalimentación remota a lo largo de la ruta hacia el recurso objetivo.
+
+Es importante comprender las características y el uso adecuado de cada verbo en el contexto de una API para garantizar una comunicación eficiente y segura entre clientes y servidores. Al elegir el verbo correcto para cada operación, se pueden diseñar APIs coherentes y fáciles de entender, lo que facilita el desarrollo de aplicaciones robustas y escalables. Además, seguir las convenciones y estándares establecidos para el uso de los verbos API ayuda a mejorar la interoperabilidad y la compatibilidad entre diferentes sistemas y aplicaciones.  
+
+---
+
+</br>
+<h3 align="center">¿Es MongoDB una base de datos SQL o NoSQL?</h3>  
+</br>
+
+MongoDB es una base de datos NoSQL. Para entender esta afirmación, es importante entender qué significa "NoSQL" y cómo se diferencia de una base de datos "SQL".
+
+#### Base de Datos SQL:
+
+- SQL (Structured Query Language) se refiere a un tipo de base de datos relacional que utiliza tablas para almacenar datos.
+- En una base de datos SQL, los datos se organizan en filas y columnas, y se utiliza un lenguaje de consulta estructurado (SQL) para realizar consultas y manipulaciones de datos.
+- Ejemplos de bases de datos SQL incluyen MySQL, PostgreSQL, Oracle y SQL Server.
+
+#### Base de Datos NoSQL:
+
+- NoSQL se refiere a un tipo de base de datos que no sigue el modelo relacional de las bases de datos SQL.
+- En lugar de tablas, las bases de datos NoSQL utilizan diferentes estructuras de almacenamiento, como documentos, columnas o grafos.
+- Estas bases de datos suelen ser más flexibles y escalables que las bases de datos SQL, lo que las hace adecuadas para entornos con grandes volúmenes de datos y necesidades de escalabilidad horizontal.
+- Ejemplos de bases de datos NoSQL incluyen MongoDB, Cassandra, Redis y Couchbase.
+
+#### Ejemplo:
+
+Supongamos que estamos creando una aplicación de comercio electrónico que necesita almacenar información sobre productos y categorías.
+
+1. Base de Datos SQL:
+En una base de datos SQL, podríamos tener dos tablas separadas para almacenar la información de los productos y las categorías.
+
+Tabla ```Productos```:
+```
+| ID | Nombre       | Precio | CategoriaID |
+|----|--------------|--------|-------------|
+| 1  | Smartphone   | $500   | 1           |
+| 2  | Laptop       | $1000  | 2           |
+
+```
+Tabla ```Categorias```: 
+```
+| ID | Nombre      |
+|----|-------------|
+| 1  | Electrónica |
+| 2  | Computadoras|
+```
+
+Aquí, la tabla ```Productos``` tiene una columna ```CategoriaID``` que hace referencia al ```ID``` de la categoría correspondiente en la tabla ```Categorias```  
+
+2. Base de Datos NoSQL (MongoDB):
+En MongoDB, podríamos almacenar esta información en una sola colección utilizando documentos JSON (BSON).
+
+Colección ```Productos```:
+```
+[
+  {
+    "_id": 1,
+    "nombre": "Smartphone",
+    "precio": 500,
+    "categoria": "Electrónica"
+  },
+  {
+    "_id": 2,
+    "nombre": "Laptop",
+    "precio": 1000,
+    "categoria": "Computadoras"
+  }
+]
+
+```
+En este caso, cada documento representa un producto y contiene información sobre el nombre, precio y categoría. No es necesario referenciar otra colección para obtener información sobre la categoría; todo está contenido dentro del documento de producto.
+
+#### MongoDB:
+
+- MongoDB es una base de datos NoSQL que utiliza un modelo de documentos para almacenar los datos.
+- En MongoDB, los datos se almacenan en documentos JSON (BSON, en realidad), que son estructuras de datos flexibles que pueden contener campos de diferentes tipos y tamaños.
+- No requiere un esquema fijo, lo que significa que cada documento en una colección puede tener un conjunto diferente de campos y estructuras.
+- MongoDB es conocido por su escalabilidad y flexibilidad, lo que lo hace popular en aplicaciones web modernas, especialmente aquellas con grandes volúmenes de datos y necesidades de escalabilidad.
+
+#### Conclusión
+En resumen, MongoDB es una base de datos NoSQL que utiliza un modelo de documentos para almacenar datos, lo que lo diferencia de las bases de datos SQL tradicionales que utilizan tablas y un modelo relacional.  
+
+---
+
+</br>
+<h3 align="center">¿Qué es Postman?</h3>  
+</br>
+
