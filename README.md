@@ -231,7 +231,7 @@ Como comentabamos en la pregunta anterior los verbos HTTP, también conocidos co
   - No requiere datos adicionales en el cuerpo de la solicitud.
   - Ejemplo de uso: Eliminar un usuario específico del sistema a través de la URL /usuarios/{id}.
 
-![Descripción Gráfica Verbos API](./API verb.png)  
+![Descripción Gráfica Verbos API](./API_verb.png)  
  
 #### Otros métodos HTTP menos comunes incluyen:
 
@@ -240,6 +240,90 @@ Como comentabamos en la pregunta anterior los verbos HTTP, también conocidos co
 - PATCH: Se utiliza para aplicar modificaciones parciales a un recurso existente.
 - TRACE: Se utiliza para realizar una prueba de bucle de retroalimentación remota a lo largo de la ruta hacia el recurso objetivo.
 
+Es importante comprender las características y el uso adecuado de cada verbo en el contexto de una API para garantizar una comunicación eficiente y segura entre clientes y servidores. Al elegir el verbo correcto para cada operación, se pueden diseñar APIs coherentes y fáciles de entender, lo que facilita el desarrollo de aplicaciones robustas y escalables. Además, seguir las convenciones y estándares establecidos para el uso de los verbos API ayuda a mejorar la interoperabilidad y la compatibilidad entre diferentes sistemas y aplicaciones.  
 
+---
 
+</br>
+<h3 align="center">¿Es MongoDB una base de datos SQL o NoSQL?</h3>  
+</br>
+
+MongoDB es una base de datos NoSQL. Para entender esta afirmación, es importante entender qué significa "NoSQL" y cómo se diferencia de una base de datos "SQL".
+
+#### Base de Datos SQL:
+
+- SQL (Structured Query Language) se refiere a un tipo de base de datos relacional que utiliza tablas para almacenar datos.
+- En una base de datos SQL, los datos se organizan en filas y columnas, y se utiliza un lenguaje de consulta estructurado (SQL) para realizar consultas y manipulaciones de datos.
+- Ejemplos de bases de datos SQL incluyen MySQL, PostgreSQL, Oracle y SQL Server.
+
+#### Base de Datos NoSQL:
+
+- NoSQL se refiere a un tipo de base de datos que no sigue el modelo relacional de las bases de datos SQL.
+- En lugar de tablas, las bases de datos NoSQL utilizan diferentes estructuras de almacenamiento, como documentos, columnas o grafos.
+- Estas bases de datos suelen ser más flexibles y escalables que las bases de datos SQL, lo que las hace adecuadas para entornos con grandes volúmenes de datos y necesidades de escalabilidad horizontal.
+- Ejemplos de bases de datos NoSQL incluyen MongoDB, Cassandra, Redis y Couchbase.
+
+#### Ejemplo:
+
+Supongamos que estamos creando una aplicación de comercio electrónico que necesita almacenar información sobre productos y categorías.
+
+1. Base de Datos SQL:
+En una base de datos SQL, podríamos tener dos tablas separadas para almacenar la información de los productos y las categorías.
+
+Tabla ```Productos```:
+```
+| ID | Nombre       | Precio | CategoriaID |
+|----|--------------|--------|-------------|
+| 1  | Smartphone   | $500   | 1           |
+| 2  | Laptop       | $1000  | 2           |
+
+```
+Tabla ```Categorias```: 
+```
+| ID | Nombre      |
+|----|-------------|
+| 1  | Electrónica |
+| 2  | Computadoras|
+```
+
+Aquí, la tabla ```Productos``` tiene una columna ```CategoriaID``` que hace referencia al ```ID``` de la categoría correspondiente en la tabla ```Categorias```  
+
+2. Base de Datos NoSQL (MongoDB):
+En MongoDB, podríamos almacenar esta información en una sola colección utilizando documentos JSON (BSON).
+
+Colección ```Productos```:
+```
+[
+  {
+    "_id": 1,
+    "nombre": "Smartphone",
+    "precio": 500,
+    "categoria": "Electrónica"
+  },
+  {
+    "_id": 2,
+    "nombre": "Laptop",
+    "precio": 1000,
+    "categoria": "Computadoras"
+  }
+]
+
+```
+En este caso, cada documento representa un producto y contiene información sobre el nombre, precio y categoría. No es necesario referenciar otra colección para obtener información sobre la categoría; todo está contenido dentro del documento de producto.
+
+#### MongoDB:
+
+- MongoDB es una base de datos NoSQL que utiliza un modelo de documentos para almacenar los datos.
+- En MongoDB, los datos se almacenan en documentos JSON (BSON, en realidad), que son estructuras de datos flexibles que pueden contener campos de diferentes tipos y tamaños.
+- No requiere un esquema fijo, lo que significa que cada documento en una colección puede tener un conjunto diferente de campos y estructuras.
+- MongoDB es conocido por su escalabilidad y flexibilidad, lo que lo hace popular en aplicaciones web modernas, especialmente aquellas con grandes volúmenes de datos y necesidades de escalabilidad.
+
+#### Conclusión
+En resumen, MongoDB es una base de datos NoSQL que utiliza un modelo de documentos para almacenar datos, lo que lo diferencia de las bases de datos SQL tradicionales que utilizan tablas y un modelo relacional.  
+
+---
+
+</br>
+<h3 align="center">¿Qué es Postman?</h3>  
+</br>
 
