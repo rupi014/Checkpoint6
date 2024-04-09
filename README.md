@@ -15,7 +15,7 @@ En Python, una clase es una especie de "plano" o "plantilla" que define las prop
 
 
 #### Sintaxis de definición de clases en Python:
- ```
+ ```py
    class NombreClase:
     # Constructor
     def __init__(self, atributo1):
@@ -36,7 +36,7 @@ En esta sintaxis:
 
 #### Ejemplo detallado de uso de clases en Python:
 
-```
+```py
 class Coche:
     # Constructor
     def __init__(self, marca, modelo, color):
@@ -85,7 +85,7 @@ Una instancia de una clase es un objeto específico creado a partir de esa clase
 
 Para crear una instancia de una clase en Python, simplemente llamamos al nombre de la clase seguido de paréntesis, opcionalmente pasando los argumentos requeridos por el constructor de la clase. Por ejemplo, si tenemos una clase llamada Coche, podemos crear una instancia de ella de la siguiente manera:  
 
-```
+```py
 mi_coche = Coche(argumentos)
 ```
 
@@ -96,7 +96,7 @@ Cuando se crea una instancia de una clase en Python, el método que se ejecuta a
 El constructor es un método especial en Python que se llama automáticamente cuando se crea una nueva instancia (objeto) de una clase. Su nombre es ```__init__``` (doble guion bajo, seguido por "init" y otro doble guion bajo).    
 #### Ejemplo:  
 
-```
+```py
 def __init__(self, argumentos_constructor):
     # Cuerpo del constructor
 ```
@@ -106,7 +106,7 @@ def __init__(self, argumentos_constructor):
 
 Por ejemplo, en el código del ejemplo anterior:
 
-```
+```py
 def __init__(self, marca, modelo, color):
     self.marca = marca
     self.modelo = modelo
@@ -297,7 +297,7 @@ Tabla ```Categorias```:
 En MongoDB, podríamos almacenar esta información en una sola colección utilizando documentos JSON (BSON).
 
 Colección ```Productos```:
-```
+```py
 [
   {
     "_id": 1,
@@ -387,7 +387,7 @@ El polimorfismo es un concepto que permite que objetos de diferentes clases pued
 
 #### Ejemplo de Polimorfismo en Python:
 
-```
+```py
 class Animal:
     def hablar(self):
         pass
@@ -444,7 +444,7 @@ En la programación Python, los métodos dunder (también conocidos como "métod
 
 #### Algunos ejemplos comunes de métodos dunder y sus usos:
 1. ```__init__```: Este método dunder se utiliza para inicializar objetos de la clase cuando son creados. Es el constructor de la clase.
-```
+```py
 class Persona:
     def __init__(self, nombre, edad):
         self.nombre = nombre
@@ -454,7 +454,7 @@ persona1 = Persona("Juan", 30)
 
 ```
 2. ```__str__```: Este método dunder se utiliza para devolver una representación de cadena legible de un objeto. Es llamado cuando se utiliza la función str() o cuando se imprime el objeto.
-```
+```py
 class Persona:
     def __init__(self, nombre, edad):
         self.nombre = nombre
@@ -468,7 +468,7 @@ print(persona1)  # Salida: Persona: Juan, Edad: 30
 
 ```
 3. ```__len__```: Este método dunder se utiliza para devolver la longitud de un objeto. Es llamado cuando se utiliza la función len() en el objeto.
-```
+```py
 class ListaPersonalizada:
     def __init__(self, elementos):
         self.elementos = elementos
@@ -501,7 +501,7 @@ Un decorador es una función que toma una función como argumento y devuelve una
 Además, Python tiene una sintaxis especial para aplicar decoradores, utilizando el símbolo @, que puedes aplicar encima de la definición de la función.
 
 #### Ejemplo:
-```
+```py
 def my_decorator(func):
     def wrapper():
         print("Antes de la función original.")
